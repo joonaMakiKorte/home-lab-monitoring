@@ -35,7 +35,6 @@ services:
       - smart-home-net
     depends_on:
       - influxdb
-    privileged: true
 
 volumes:
   influxdb_data:
