@@ -6,7 +6,6 @@ services:
     ports:
       - "8086:8086"
     environment:
-      # Initial Setup Variables (Run once)
       - DOCKER_INFLUXDB_INIT_MODE=setup
       - DOCKER_INFLUXDB_INIT_USERNAME=${INFLUX_USER}
       - DOCKER_INFLUXDB_INIT_PASSWORD=${INFLUX_PASSWORD}
