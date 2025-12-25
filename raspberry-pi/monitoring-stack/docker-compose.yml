@@ -25,12 +25,16 @@ services:
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - /var/run/docker.sock:/var/run/docker.sock
+      - /:/rootfs:ro
     environment:
       - INFLUX_TOKEN=${INFLUX_TOKEN}
       - INFLUX_ORG=${INFLUX_ORG}
       - INFLUX_BUCKET=${INFLUX_BUCKET}
       - INFLUX_URL=http://influxdb:8086
       - RASP_IP=${RASP_IP}
+      - HOST_MOUNT_PREFIX=/rootfs
+      - HOST_PROC=/rootfs/proc
+      - HOST_SYS=/rootfs/sys
     networks:
       - smart-home-net
     depends_on:
