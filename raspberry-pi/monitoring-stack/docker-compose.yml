@@ -22,10 +22,10 @@ services:
     image: telegraf:latest
     container_name: telegraf
     restart: unless-stopped
-    user: "root"
+    user: "0:${DOCKER_GID}"
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - INFLUX_TOKEN=${INFLUX_TOKEN}
       - INFLUX_ORG=${INFLUX_ORG}
