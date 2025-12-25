@@ -22,6 +22,7 @@ services:
     image: telegraf:latest
     container_name: telegraf
     restart: unless-stopped
+    user: "root"
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
