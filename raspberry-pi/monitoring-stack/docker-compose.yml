@@ -30,6 +30,7 @@ services:
       - INFLUX_ORG=${INFLUX_ORG}
       - INFLUX_BUCKET=${INFLUX_BUCKET}
       - INFLUX_URL=http://influxdb:8086
+      - RASP_IP=${RASP_IP}
     networks:
       - smart-home-net
     depends_on:
