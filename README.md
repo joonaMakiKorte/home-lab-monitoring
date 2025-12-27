@@ -68,10 +68,27 @@ Follow these steps to deploy the monitoring stack.
 - **Git** installed on the repository.
 
 **1. Clone the Repository**
-Run this both on your Raspberry Pi and your Fedora machine:
+
+**Option A: Fedora Server (Standard Clone)**
+Run this on your Fedora machine to download the full repository:
 ```bash
 git clone https://github.com/joonaMakiKorte/home-lab-monitoring.git
 cd home-lab-monitoring
+```
+
+**Option B: Raspberry Pi (Sparse Clone)**
+Run this on your Raspberry Pi to download **only** the necessary Pi files (cleaner and saves space):
+```bash
+# 1. Clone in sparse mode (downloads history but no files initially)
+git clone --no-checkout https://github.com/joonaMakiKorte/home-lab-monitoring.git
+cd home-lab-monitoring
+
+# 2. Initialize sparse checkout
+git sparse-checkout init --cone
+
+# 3. Download only the 'raspberry-pi' folder
+git sparse-checkout set raspberry-pi
+git checkout main
 ```
 
 **2. Setup: Raspberry Pi (Edge Collector)**
