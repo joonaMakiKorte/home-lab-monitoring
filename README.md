@@ -143,7 +143,3 @@ The dashboards "Raspberry Pi Monitor" and "Node Exporter Full" will be pro-loade
 
 ## Licence
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-
