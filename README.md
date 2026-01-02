@@ -14,11 +14,14 @@ The Raspberry Pi node monitors **System Vital Signs**, **Docker Health**, and **
 
 ### Monitoring Dashboard
 **System Stats**
-<img width="1679" height="659" alt="pi-system" src="https://github.com/user-attachments/assets/edb2d02f-c777-4e95-a3ca-bf47b6bc111c" />
+<img width="2226" height="960" alt="image" src="https://github.com/user-attachments/assets/13c009ff-8dd5-43cf-a207-ff14eff1a7ef" />
 **Docker Health**
-<img width="1667" height="260" alt="pi-docker" src="https://github.com/user-attachments/assets/cbee278a-caf8-4e96-9541-ede672e2b332" />
+<img width="2225" height="427" alt="image" src="https://github.com/user-attachments/assets/2332d930-052a-4016-bc43-763e54fe404b" />
 **Network Health**
-<img width="1673" height="486" alt="pi-network" src="https://github.com/user-attachments/assets/bd951368-0786-4ff5-856f-c9691985a385" />
+<img width="2208" height="721" alt="image" src="https://github.com/user-attachments/assets/d48eb71d-636a-4e2c-9284-518e3270a43c" />
+**Pi-hole**
+<img width="2193" height="813" alt="image" src="https://github.com/user-attachments/assets/b30f57d1-a138-4598-9956-5a9f980dc119" />
+
 
 ## Fedora Server Monitoring
 The heavy lifting of the monitoring stack runs on a separate Fedora machine (laptop/server). Acting as the centralized **Observability Hub**, it aggregates data from remote nodes (like the Raspberry Pi) while monitoring its own performance using cloud-native standards.
