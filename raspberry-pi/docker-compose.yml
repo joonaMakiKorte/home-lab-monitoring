@@ -35,6 +35,7 @@ services:
       - HOST_MOUNT_PREFIX=/rootfs
       - HOST_PROC=/rootfs/proc
       - HOST_SYS=/rootfs/sys
+      - PIHOLE_TOKEN=${PIHOLE_TOKEN}
     networks:
       - smart-home-net
     depends_on:
