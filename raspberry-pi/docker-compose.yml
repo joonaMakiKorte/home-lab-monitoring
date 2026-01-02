@@ -27,6 +27,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /:/rootfs:ro
       - /dev:/dev:ro
+      - /run/udev:/run/udev:ro
     environment:
       - INFLUX_TOKEN=${INFLUX_TOKEN}
       - INFLUX_ORG=${INFLUX_ORG}
@@ -36,7 +37,6 @@ services:
       - HOST_MOUNT_PREFIX=/rootfs
       - HOST_PROC=/rootfs/proc
       - HOST_SYS=/rootfs/sys
-      - PIHOLE_TOKEN=${PIHOLE_TOKEN}
     networks:
       - smart-home-net
     depends_on:
